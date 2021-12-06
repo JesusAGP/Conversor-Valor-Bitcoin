@@ -22,8 +22,10 @@ De igual manera, se genero una pequeña pagina secundaria solo para dividir serv
 ![cap3](https://user-images.githubusercontent.com/86432373/144898187-106f2c05-b08c-49e4-9f58-e0f4decef7d6.png)
 
 Habiendo generado las paginas anteriores, se montaron en una carpeta conjunta en donde se añadieron los archivos necesarios para ejecutarlo en docker. Para ello se hizo uso de los comandos:
-  -docker-compose build
-  -docker-compose up
+  
+  docker-compose build
+  
+  docker-compose up
   
 Con esto se cargaran las imagenes necesarias para soportar el contenedor de la aplicacion.
   
