@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<main>
+    1 Bitcoin
+    <div class="coin-container" id="bitcoin">
+        <div class="coin bitcoin-item">₿</div>
+    </div>
+    =
+    <span id="usd-amount"></span>
+    <script>
+        const dollarContainer = document.getElementById('dollar');
+        const usdAmount = document.getElementById('usd-amount');
+        var totalUsd;
+
+        fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .then(response => response.json())
+            .then(data => displayData(data));
+
+        const displayData = data => {
+            const usd = data.bpi.USD.rate_float;
+            totalUsd = usd;
+            usdAmount.textContent = `$${usd} USD`;
+        }
+    </script>
+
+    <br><br><br>
+    <div>
+        Ingrese un valor en dolares para convertirlo
+    </div>
+    <br>
+
+    <input type="text" id="fname" onkeyup="myFunction()" style="color:black" value="0"/>
+    =
+    <span id="demo"></span> ₿
+    <script>
+        function myFunction() {
+            var x = document.getElementById("fname").value;
+            var compra = x/totalUsd;
+            document.getElementById("demo").innerHTML = compra;
+        }
+    </script>
+
+</main>
+</body>
+</html>
+
+<style>
+    * {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    body {
+        background-color: #26324d;
+    }
+
+    main {
+        max-width: 450px;
+        margin: 250px auto;
+    }
+
+    .coin-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+
+    .coin {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 5px 5px 0;
+    }
+
+    .bitcoin-item {
+        background-color: #f1c232;
+    }
+
+    .dollar-item {
+        opacity: 0;
+        background-color: #E34A6F;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-name: opacity;
+    }
+
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
