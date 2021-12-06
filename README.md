@@ -20,3 +20,13 @@ Se genero una sencilla pagina hecha en html que genera la conversion de dolares 
 De igual manera, se genero una pequeña pagina secundaria solo para dividir servicios. Aqui se registran las visitas generadas a la pagina con flask y una pequeña base de datos integrada.
 
 ![cap3](https://user-images.githubusercontent.com/86432373/144898187-106f2c05-b08c-49e4-9f58-e0f4decef7d6.png)
+
+Habiendo generado las paginas anteriores, se montaron en una carpeta conjunta en donde se añadieron los archivos necesarios para ejecutarlo en docker. Para ello se hizo uso de los comandos:
+  -docker-compose build
+  -docker-compose up
+  
+Con esto se cargaran las imagenes necesarias para soportar el contenedor de la aplicacion.
+  
+![image](https://user-images.githubusercontent.com/86432373/144899781-6d15a57a-bb34-47e2-a62b-23b6c128199a.png)
+
+![image](https://user-images.githubusercontent.com/86432373/144899822-dee9b216-9f1c-487a-9ccf-80c66ea38410.png)
