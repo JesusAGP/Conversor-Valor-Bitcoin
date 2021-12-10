@@ -32,3 +32,6 @@ Con esto se cargaran las imagenes necesarias para soportar el contenedor de la a
 ![image](https://user-images.githubusercontent.com/86432373/144899781-6d15a57a-bb34-47e2-a62b-23b6c128199a.png)
 
 ![image](https://user-images.githubusercontent.com/86432373/144899822-dee9b216-9f1c-487a-9ccf-80c66ea38410.png)
+
+
+Video del proyecto: https://youtu.be/_HzTTMZUfsE
